@@ -1,16 +1,16 @@
 h1 {
     text-align: center;
-    font-family:Poppins;
   }
 
   body {
-    background: #f1f1f1
+    background: #f1f1f1;
+    font-family: Poppins;
   }
   #todo-list {
     width: 500px;
     margin: 60px auto;
   }
-  #todoAdd{
+  #todoAdd, input{
     border-radius: 10px;
     background-color: #f0f0f0;
     border: 1px solid #a1a1a1;
@@ -48,15 +48,15 @@ h1 {
     cursor: pointer;
   }
   button:hover {
-    background-color: rgb(173, 47, 28);
+    background-color: rgb(30, 100, 112);
   }
   button:active {
-    background-color: rgb(130,35,21);
+    background-color: rgb(30, 100, 112);
   }
   button:focus {
     outline: 0;
   }
-  input[type='text'] { font-size: 20px; font-family: monospace; }
+  input[type='text'] { font-size: 20px;}
   .todo input[type="checkbox"] {
     transform: scale(1.8) translateY(1px);
     margin: 0 16px 0 0;
@@ -85,3 +85,154 @@ h1 {
     margin-left: 15px;
   }
 
+
+  /* Button ------------------------------------------------------------------ */
+
+  .Btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition-duration: 0.3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    background: rgb(255, 135, 65);
+    background: linear-gradient(
+      250deg,
+      rgba(255, 135, 65, 1) 15%,
+      rgba(255, 65, 65, 1) 65%
+    );
+  }
+  
+  /* plus sign */
+  .sign {
+    width: 100%;
+    transition-duration: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0;
+  }
+  
+  .sign svg {
+    width: 17px;
+  }
+  
+  .sign svg path {
+    fill: white;
+  }
+  /* text */
+  .text {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: white;
+    font-size: 1em;
+    font-weight: 600;
+    transition-duration: 0.3s;
+  }
+  /* hover effect on button width */
+  .Btn:hover {
+    width: 125px;
+    border-radius: 40px;
+    transition-duration: 0.3s;
+  }
+  
+  .Btn:hover .sign {
+    width: 30%;
+    transition-duration: 0.3s;
+    
+  }
+  /* hover effect button's text */
+  .Btn:hover .text {
+    opacity: 1;
+    width: 70%;
+    transition-duration: 0.3s;
+    padding-right: 10px;
+  }
+  /* button click effect*/
+  .Btn:active {
+    transform: translate(2px, 2px);
+  }
+
+  /* Edit Button ------------------------------------------------------------------ */
+
+  .BtnEdit {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition-duration: 0.3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    background: rgb(65, 141, 255);
+    background: linear-gradient(
+      250deg,
+      rgb(65, 179, 255) 15%,
+      rgb(65, 78, 255) 65%
+    );
+  }
+  
+  /* plus sign */
+  .sign {
+    width: 100%;
+    transition-duration: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0;
+  }
+  
+  .sign svg {
+    width: 17px;
+  }
+  
+  .sign svg path {
+    fill: white;
+  }
+  /* text */
+  .text {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: white;
+    font-size: 1em;
+    font-weight: 600;
+    transition-duration: 0.3s;
+  }
+  /* hover effect on button width */
+  .BtnEdit:hover {
+    width: 125px;
+    border-radius: 40px;
+    transition-duration: 0.3s;
+  }
+  
+  .BtnEdit:hover .sign {
+    width: 30%;
+    transition-duration: 0.3s;
+    
+  }
+  /* hover effect button's text */
+  .BtnEdit:hover .text {
+    opacity: 1;
+    width: 70%;
+    transition-duration: 0.3s;
+    padding-right: 10px;
+  }
+  /* button click effect*/
+  .BtnEdit:active {
+    transform: translate(2px, 2px);
+  }
+  
